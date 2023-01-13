@@ -1,0 +1,83 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgba(234, 249, 249, 0.67) 0.1%,
+    rgba(239, 249, 251, 0.63) 90.1%
+  );
+}
+.container {
+  display: block;
+  margin: 0 auto;
+}
+.card {
+  display: block;
+  margin: 60px auto;
+  padding: 15px;
+  border: #ccc 1px solid;
+}
+form {
+  text-align: center;
+  margin-left: 29px;
+}
+input {
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 20px;
+}
+.left-section {
+  font-size: 44px;
+  margin-left: 24px;
+}
+.emoji-main {
+  font-size: 36px;
+  position: relative;
+  top: -7px;
+}
+.right-section {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+  text-align: right;
+  margin-right: 27px;
+}
+.current-date,
+.current-weather {
+  font-size: 19px;
+  line-height: 0.8;
+  text-align: right;
+  font-weight: 400;
+  color: #707582;
+  margin-right: 27px;
+}
+.deg {
+  font-size: 14px;
+  position: relative;
+  top: -26px;
+}
+a {
+  text-decoration: none;
+  color: #212529;
+}
+.stats {
+  font-weight: 300;
+  font-size: 15px;
+  position: relative;
+  bottom: -7px;
+}
+
+.forecast {
+  font-size: 20px;
+  text-align: center;
+}
+.emoji-forecast {
+  font-size: 36px;
+}
+#location {
+  color: white;
+  background: #4ad6ef;
+  border: 2px solid #ccc;
+}
+#search {
+  border: 2px solid #ccc;
+}
