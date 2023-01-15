@@ -56,9 +56,16 @@ input {
   top: -26px;
 }
 a {
+  text-align: center;
   text-decoration: none;
   color: #212529;
 }
+.git-link {
+  display: block;
+  text-align: center;
+  line-height: 0%;
+}
+
 .stats {
   font-weight: 300;
   font-size: 15px;
