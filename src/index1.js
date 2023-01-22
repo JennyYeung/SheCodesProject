@@ -65,6 +65,8 @@ function showTemp(response) {
   let windSpeed = Math.round(response.data.wind.speed);
   let showWind = document.querySelector("#wind");
   showWind.innerHTML = `Wind: ${windSpeed}Km/h`;
+  let condition = document.querySelector("#main-weather");
+  condition.innerHTML = response.data.weather[0].description;
 }
 function showCity(event) {
   event.preventDefault();
