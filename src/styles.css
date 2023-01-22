@@ -8,11 +8,12 @@ body {
 .container {
   display: block;
   margin: 0 auto;
+  max-width: 700px;
 }
 .card {
   display: block;
   margin: 60px auto;
-  padding: 15px;
+  padding: 30px;
   border: #ccc 1px solid;
 }
 form {
@@ -26,11 +27,11 @@ input {
   padding: 5px 20px;
 }
 .left-section {
-  font-size: 44px;
+  font-size: 52px;
   margin-left: 24px;
 }
 .emoji-main {
-  font-size: 36px;
+  font-size: 46px;
   position: relative;
   top: -7px;
 }
@@ -56,16 +57,12 @@ input {
   top: -26px;
 }
 a {
+  margin: 0;
+  padding: 0;
   text-align: center;
   text-decoration: none;
   color: #212529;
 }
-.git-link {
-  display: block;
-  text-align: center;
-  line-height: 0%;
-}
-
 .stats {
   font-weight: 300;
   font-size: 15px;
@@ -82,7 +79,7 @@ a {
 }
 #location {
   color: white;
-  background: #4ad6ef;
+  background: #43c8e0;
   border: 2px solid #ccc;
 }
 #search {
