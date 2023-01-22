@@ -27,11 +27,11 @@ input {
   padding: 5px 20px;
 }
 .left-section {
-  font-size: 52px;
+  font-size: 64px;
   margin-left: 24px;
 }
 .emoji-main {
-  font-size: 46px;
+  font-size: 52px;
   position: relative;
   top: -7px;
 }
@@ -54,7 +54,7 @@ input {
 .deg {
   font-size: 14px;
   position: relative;
-  top: -26px;
+  top: -36px;
 }
 a {
   margin: 0;
