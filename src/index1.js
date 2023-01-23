@@ -38,8 +38,13 @@ function showActualLocation(response) {
   showCelsius1.innerHTML = Math.round(response.data.main.temp);
   let celsius1 = Math.round(response.data.main.temp);
   let fahrenheit1 = Math.round((celsius1 * 9) / 5 + 32);
-  let showfahrenheit1 = document.querySelector("#show-temp");
-  showfahrenheit1.innerHTML = fahrenheit1;
+  function changeTemp1(event) {
+    event.preventDefault();
+    let showfahrenheit1 = document.querySelector("#show-temp");
+    showfahrenheit1.innerHTML = fahrenheit1;
+  }
+  let tempFahrenheit1 = document.querySelector("#fahrenheit");
+  tempFahrenheit1.addEventListener("click", changeTemp1);
   let feltTemperature1 = document.querySelector("#tempFelt");
   let feltTemp1 = Math.round(response.data.main.feels_like);
   feltTemperature1.innerHTML = `Feels like: ${feltTemp1}℃`;
