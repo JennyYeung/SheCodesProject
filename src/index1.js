@@ -27,15 +27,25 @@ function showActualLocation(response) {
   console.log(response);
   let geoCity = document.querySelector("#current-city");
   geoCity.innerHTML = response.data.name;
-  //let nowWeather = document.querySelector("#main-weather");
-  //nowWeather.innerHTML = response.data.weather.main;
+  let nowWeather = document.querySelector("#main-weather");
+  nowWeather.innerHTML = response.data.weather[0].description;
+  let showHumidity1 = document.querySelector("#humidity");
+  showHumidity1.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  let windSpeed1 = Math.round(response.data.wind.speed);
+  let showWind1 = document.querySelector("#wind");
+  showWind1.innerHTML = `Wind: ${windSpeed1}Km/h`;
+  let showCelsius1 = document.querySelector("#show-temp");
+  showCelsius1.innerHTML = Math.round(response.data.main.temp);
+  let feltTemperature1 = document.querySelector("#tempFelt");
+  let feltTemp1 = Math.round(response.data.main.feels_like);
+  feltTemperature1.innerHTML = `Feels like: ${feltTemp1}℃`;
 }
 function handlePosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
   let latitude = Math.trunc(position.coords.latitude * 100) / 100;
   let longitude = Math.trunc(position.coords.longitude * 100) / 100;
-  let locationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f81614abe2395d5dfecd45b9298041de`;
+  let locationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f81614abe2395d5dfecd45b9298041de&units=metric`;
   axios.get(locationUrl).then(showActualLocation);
 }
 function geoLocation() {
@@ -59,7 +69,7 @@ function showTemp(response) {
   tempFahrenheit.addEventListener("click", changeTemp);
   let feltTemperature = document.querySelector("#tempFelt");
   let feltTemp = Math.round(response.data.main.feels_like);
-  feltTemperature.innerHTML = `Feels like: ${feltTemp} ℃`;
+  feltTemperature.innerHTML = `Feels like: ${feltTemp}℃`;
   let showHumidity = document.querySelector("#humidity");
   showHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let windSpeed = Math.round(response.data.wind.speed);
