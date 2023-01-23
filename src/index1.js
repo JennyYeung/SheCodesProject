@@ -36,6 +36,10 @@ function showActualLocation(response) {
   showWind1.innerHTML = `Wind: ${windSpeed1}Km/h`;
   let showCelsius1 = document.querySelector("#show-temp");
   showCelsius1.innerHTML = Math.round(response.data.main.temp);
+  let celsius1 = Math.round(response.data.main.temp);
+  let fahrenheit1 = Math.round((celsius1 * 9) / 5 + 32);
+  let showfahrenheit1 = document.querySelector("#show-temp");
+  showfahrenheit1.innerHTML = fahrenheit1;
   let feltTemperature1 = document.querySelector("#tempFelt");
   let feltTemp1 = Math.round(response.data.main.feels_like);
   feltTemperature1.innerHTML = `Feels like: ${feltTemp1}℃`;
@@ -65,9 +69,9 @@ function showTemp(response) {
   console.log(response);
   let showCelsius = document.querySelector("#show-temp");
   showCelsius.innerHTML = Math.round(response.data.main.temp);
-  let celcius = Math.round(response.data.main.temp);
-  let fahrenheit = Math.round((celcius * 9) / 5 + 32);
-  let celciusConversion = Math.round(response.data.main.temp);
+  let celsius = Math.round(response.data.main.temp);
+  let fahrenheit = Math.round((celsius * 9) / 5 + 32);
+  let celsiusConversion = Math.round(response.data.main.temp);
   function changeTemp(event) {
     event.preventDefault();
     let showfahrenheit = document.querySelector("#show-temp");
@@ -80,7 +84,7 @@ function showTemp(response) {
     let showCelsius = document.querySelector("#show-temp");
     tempCelsius.classList.add("active");
     tempFahrenheit.classList.remove("active");
-    showCelsius.innerHTML = celciusConversion;
+    showCelsius.innerHTML = celsiusConversion;
   }
 
   let tempCelsius = document.querySelector("#celsius");
