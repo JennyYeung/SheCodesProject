@@ -39,7 +39,14 @@ function showActualLocation(response) {
   let feltTemperature1 = document.querySelector("#tempFelt");
   let feltTemp1 = Math.round(response.data.main.feels_like);
   feltTemperature1.innerHTML = `Feels like: ${feltTemp1}℃`;
+  let iconElement1 = document.querySelector("#icon");
+  iconElement1.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement1.setAttribute("alt", response.data.weather[0].description);
 }
+
 function handlePosition(position) {
   console.log(position.coords.latitude);
   console.log(position.coords.longitude);
@@ -77,6 +84,12 @@ function showTemp(response) {
   showWind.innerHTML = `Wind: ${windSpeed}Km/h`;
   let condition = document.querySelector("#main-weather");
   condition.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function showCity(event) {
   event.preventDefault();

@@ -26,13 +26,13 @@ input {
   padding: 5px 20px;
 }
 .left-section {
-  font-size: 67px;
-  margin-left: 16px;
+  font-size: 60px;
+  margin-left: -10px;
 }
-.emoji-main {
-  font-size: 55px;
+#icon {
+  font-size: 30px;
   position: relative;
-  top: -6px;
+  top: -5px;
 }
 .right-section {
   text-transform: capitalize;
@@ -53,9 +53,9 @@ input {
   margin-right: 27px;
 }
 .deg {
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
-  top: -35px;
+  top: -32px;
 }
 a {
   margin: 0;
