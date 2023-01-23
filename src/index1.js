@@ -67,11 +67,24 @@ function showTemp(response) {
   showCelsius.innerHTML = Math.round(response.data.main.temp);
   let celcius = Math.round(response.data.main.temp);
   let fahrenheit = Math.round((celcius * 9) / 5 + 32);
+  let celciusConversion = Math.round(response.data.main.temp);
   function changeTemp(event) {
     event.preventDefault();
     let showfahrenheit = document.querySelector("#show-temp");
+    tempCelsius.classList.remove("active");
+    tempFahrenheit.classList.add("active");
     showfahrenheit.innerHTML = fahrenheit;
   }
+  function revertTemp(event) {
+    event.preventDefault();
+    let showCelsius = document.querySelector("#show-temp");
+    tempCelsius.classList.add("active");
+    tempFahrenheit.classList.remove("active");
+    showCelsius.innerHTML = celciusConversion;
+  }
+
+  let tempCelsius = document.querySelector("#celsius");
+  tempCelsius.addEventListener("click", revertTemp);
   let tempFahrenheit = document.querySelector("#fahrenheit");
   tempFahrenheit.addEventListener("click", changeTemp);
   let feltTemperature = document.querySelector("#tempFelt");
@@ -105,20 +118,3 @@ function showCity(event) {
 }
 let searchFunction = document.querySelector("#search-city");
 searchFunction.addEventListener("submit", showCity);
-//
-
-function changeTemp(event) {
-  event.preventDefault();
-  let showfahrenheit = document.querySelector("#show-temp");
-  showfahrenheit.innerHTML = "35";
-}
-let tempFahrenheit = document.querySelector("#fahrenheit");
-tempFahrenheit.addEventListener("click", changeTemp);
-
-function revertTemp(event) {
-  event.preventDefault();
-  let showCelsius = document.querySelector("#show-temp");
-  showCelsius.innerHTML = "12";
-}
-let tempCelsius = document.querySelector("#celsius");
-tempCelsius.addEventListener("click", revertTemp);
