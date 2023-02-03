@@ -87,6 +87,9 @@ a {
 #search {
   border: 2px solid #ccc;
 }
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
