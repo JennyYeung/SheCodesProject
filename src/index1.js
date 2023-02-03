@@ -23,7 +23,8 @@ let todayDate = document.querySelector("#show-date");
 console.log(todayDate);
 todayDate.innerHTML = dateTime;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -48,6 +49,14 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let latitude = Math.trunc(coordinates.lat * 100) / 100;
+  let longitude = Math.trunc(coordinates.lon * 100) / 100;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=f81614abe2395d5dfecd45b9298041de&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showActualLocation(response) {
@@ -139,6 +148,8 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 function showCity(event) {
   event.preventDefault();
@@ -154,5 +165,3 @@ function showCity(event) {
 }
 let searchFunction = document.querySelector("#search-city");
 searchFunction.addEventListener("submit", showCity);
-
-displayForecast();
