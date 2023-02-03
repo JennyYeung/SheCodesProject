@@ -9,7 +9,7 @@ body {
   display: block;
   margin: 0 379px;
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 }
 .card {
   display: block;
@@ -28,7 +28,7 @@ input {
   padding: 5px 20px;
 }
 .left-section {
-  font-size: 60px;
+  font-size: 59px;
   margin-left: -10px;
 }
 #icon {
@@ -38,20 +38,20 @@ input {
 }
 .right-section {
   text-transform: capitalize;
-  font-size: 1.4rem;
-  line-height: 1;
-  font-weight: 400;
+  font-size: 26px;
+  line-height: 0.9;
+  font-weight: 380;
   text-align: right;
   margin-right: 27px;
 }
 .current-date,
 .current-weather {
   text-transform: capitalize;
-  font-size: 19px;
-  line-height: 0.95;
+  font-size: 18px;
+  line-height: 0.99;
   text-align: right;
-  font-weight: 400;
-  color: #707582;
+  font-weight: 360;
+  opacity: 0.7;
   margin-right: 27px;
 }
 .deg {
@@ -69,7 +69,8 @@ a {
   font-weight: 300;
   font-size: 15px;
   position: relative;
-  bottom: -7px;
+  bottom: -13.5px;
+  line-height: 0.8;
 }
 
 .forecast {
@@ -81,14 +82,14 @@ a {
 }
 #location {
   color: white;
-  background: #43c8e0;
+  background: #63c5da;
   border: 2px solid #ccc;
 }
 #search {
   border: 2px solid #ccc;
 }
 .weather-forecast-temperature-min {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
