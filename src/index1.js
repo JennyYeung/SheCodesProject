@@ -167,11 +167,7 @@ function handlePosition(position) {
     axios.get(apiUrl).then(displayForecast);
   }
 }
-function geoLocation() {
-  navigator.geolocation.getCurrentPosition(handlePosition);
-}
-let currentLocation = document.querySelector("#location");
-currentLocation.addEventListener("click", geoLocation);
+
 //
 function showTemp(response) {
   console.log(response);

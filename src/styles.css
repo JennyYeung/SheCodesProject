@@ -63,6 +63,7 @@ input {
   position: relative;
   top: -32px;
 }
+
 a {
   margin: 0;
   padding: 0;
@@ -73,7 +74,7 @@ a {
   font-weight: 300;
   font-size: 15px;
   position: relative;
-  bottom: -16.5px;
+  bottom: -17px;
   line-height: 0.8;
 }
 
