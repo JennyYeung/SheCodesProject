@@ -23,12 +23,11 @@ form {
 }
 input {
   text-align: center;
-  border: 2px solid #ccc;
   border-radius: 4px;
   padding: 5px 20px;
 }
 .left-section {
-  font-size: 59px;
+  font-size: 66px;
   margin-left: -10px;
 }
 #icon {
@@ -36,23 +35,28 @@ input {
   position: relative;
   top: -5px;
 }
+#info {
+  position: relative;
+  bottom: -11px;
+}
 .right-section {
   text-transform: capitalize;
   font-size: 26px;
-  line-height: 0.9;
   font-weight: 380;
   text-align: right;
   margin-right: 27px;
+  line-height: 0.8;
 }
+
 .current-date,
 .current-weather {
   text-transform: capitalize;
   font-size: 18px;
-  line-height: 0.99;
   text-align: right;
   font-weight: 360;
   opacity: 0.7;
   margin-right: 27px;
+  line-height: 0.8;
 }
 .deg {
   font-size: 16px;
@@ -69,7 +73,7 @@ a {
   font-weight: 300;
   font-size: 15px;
   position: relative;
-  bottom: -13.5px;
+  bottom: -16.5px;
   line-height: 0.8;
 }
 
@@ -82,12 +86,9 @@ a {
 }
 #location {
   color: white;
-  background: #63c5da;
-  border: 2px solid #ccc;
+  background: #0492c2;
 }
-#search {
-  border: 2px solid #ccc;
-}
+
 .weather-forecast-temperature-min {
   opacity: 0.7;
 }
