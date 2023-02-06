@@ -176,25 +176,7 @@ function showTemp(response) {
   let celsius = Math.round(response.data.main.temp);
   let fahrenheit = Math.round((celsius * 9) / 5 + 32);
   let celsiusConversion = Math.round(response.data.main.temp);
-  function changeTemp(event) {
-    event.preventDefault();
-    let showfahrenheit = document.querySelector("#show-temp");
-    tempCelsius.classList.remove("active");
-    tempFahrenheit.classList.add("active");
-    showfahrenheit.innerHTML = fahrenheit;
-  }
-  function revertTemp(event) {
-    event.preventDefault();
-    let showCelsius = document.querySelector("#show-temp");
-    tempCelsius.classList.add("active");
-    tempFahrenheit.classList.remove("active");
-    showCelsius.innerHTML = celsiusConversion;
-  }
 
-  let tempCelsius = document.querySelector("#celsius");
-  tempCelsius.addEventListener("click", revertTemp);
-  let tempFahrenheit = document.querySelector("#fahrenheit");
-  tempFahrenheit.addEventListener("click", changeTemp);
   let feltTemperature = document.querySelector("#tempFelt");
   let feltTemp = Math.round(response.data.main.feels_like);
   feltTemperature.innerHTML = `Feels like: ${feltTemp}℃`;
